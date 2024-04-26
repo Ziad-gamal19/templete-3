@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media (min-width:500px) {
+    .page{
+        height: 120vh;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .page .header{
+        width: 100%;
+        height: 7%;
+        padding: 10px 5px;
+        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .page .header ul{
+        width: 85%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+    .page .header ul li:first-child{
+        font-size: 25px;
+        margin-left: 5px;
+    }
+    .page .header ul li{
+        height: 100%;
+        width: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .page .header ul li:not(:first-child)::before{
+        content: "";
+        position: absolute;
+        background-color: brown;
+        width: 100%;
+        height: 2px;
+        bottom: 40%;
+        opacity: 0;
+    }
+    .page .header ul li:not(:first-child):hover::before{
+        transition: 0.5s;
+        bottom: 0;
+        opacity: 1;
+    }
+    .page .header .logo{
+        height: 100%;
+        width: 14%;
+        display: flex;
+        align-items: center;
+    }
+    .page .header .logo img{
+        height: 50%;
+        border-radius: 50px;
+    }
+
+
+
+
+    .page .box{
+        /* background-color: blueviolet; */
+        width: 100%;
+        height: 85%;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .page .box .img{
+        width: 90%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .page .box .img .imgbig{
+        width: 75%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .page .box .img .imgbig img{
+        height: 90%;
+        width: 90%;
+        border-radius: 20px;
+    }
+    .page .box .img .imgsmall{
+        width: 75%;
+        height: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .page .box .img .imgsmall img{
+        height: 80%;
+        width: 17%;
+        border-radius: 10px;
+    }
+    .page .box .text{
+        width: 90%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .page .box .text .text2{
+        width: 100%;
+        height: 50%;
+        align-self: flex-start;
+    }
+    .page .box .text .text2 span{
+        display: block;
+        font-size: 25px;
+        font-weight: 900;
+        text-align: center;
+        margin: 10px 0;
+        color: rgb(255, 160, 18);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .page .box .text .text2 h5{
+        margin: 15px 0;
+        font-weight: 600;
+        font-size: 25px;
+        position: relative;
+        width: fit-content;
+    }
+    .page .box .text .text2 p{
+        font-size: 15px;
+        padding: 10px 0;
+    }
+    .page .box .text .text2 h5::before{
+        content: "/50";
+        position: absolute;
+        right: -45px;
+        padding: 5px;
+        border-radius: 20px;
+        width: 30px;
+        height: 20px;
+        font-size: 20px;
+        background-color: antiquewhite;
+    }
+
+
+
+    .page .box .text .text3{
+        width: 100%;
+        height: 40%;
+        align-self: flex-start;
+        display: flex ;
+        flex-direction: row;
+        align-items: flex-start;
+        padding-left: 35px;
+    }
+    .page .box .text .text3 .spans{
+        width: 30%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-right: 20px;
+    }
+    .page .box .text .text3 .spans span{
+        background-color: rgb(241, 241, 241);
+        width: 30%;
+        height: 80%;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .page .box .text .text3 input{
+        width: 40%;
+        border: none;
+        height: 30%;
+        border-radius: 10px;
+        background-color: #fdb14d;
+        outline: none;
+        box-sizing: border-box;
+        padding: 1px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 15px;
+        color: aliceblue;
+    }
+}
+
+
+
+
+/*sssssssssss*/
+@media (min-width:750px) {
+    .page {
+        margin: 0 auto;
+        width: 80%;
+    }
+    .page .header{
+        width: 85%;
+    }
+    .page  .box{
+        width: 85%;
+    }
+    .page .header ul{
+        justify-content: flex-start;
+    }
+    .page .header ul li{
+        width: 12%;
+        margin: 0 10px;
+        
+    }
+    .page .header ul li:first-child{
+        font-size: 25px;
+    }
+    .page .header ul li {
+        font-size: 15px;
+    }
+    .page .box .img .imgbig{
+        width: 80%;
+    }
+    .page .box .img .imgsmall{
+        width: 80%;
+    }
+    .page .box .text {
+        justify-content: space-evenly;
+    }
+    .page .box .text .text2{
+        width:80%;
+        height: 50%;
+    }
+    .page .box .text .text2 span{
+        text-align: left;
+    }
+
+
+}
+@media (min-width:1000px) {
+    .page .box .img{
+        justify-content: space-evenly;
+    }
+    .page .box .img .imgbig{
+        width:60%;
+        height: 80%;
+        
+    }
+    .page .box .img .imgsmall{
+        width: 15%;
+        height: 80%;
+        flex-direction: column;
+        align-content: space-between;
+    }
+    .page .box .img .imgsmall img{
+        height: 80px;
+        width: 85px;
+    }
+    .page .box .text .text3 .spans {
+        justify-content: center;
+    }
+    .page .box .text .text3 .spans span{
+        width: 25%;
+        margin: 2px;
+    }
+}
+
+/*ssssssssss*/
+@media (min-width:1200px) {
+    .page{
+        width: 80vw;
+        margin: 0 auto;
+        height: 100vh;
+    }
+    .page .header {
+        width: 70%;
+    }
+    .page .box{
+        width: 80%;
+        /* background-color: black; */
+        height: 70%;
+    }
+    .page .box .img{
+        width: 50%;
+        height: 85%;
+        align-content: space-evenly;
+    }
+
+    .page .box .img .imgbig{
+        width:90%;
+        height: 70%;
+        /* background-color: red; */
+        
+    }
+    .page .box .img .imgsmall{
+        width: 90%;
+        height: 15%;
+        /* background-color: antiquewhite; */
+        margin-bottom: 20px;
+    }
+
+
+    .page .box .text{
+        width: 45%;
+        height: 85%;
+    }
+    .page .header ul li:first-child{
+        font-size: 35px;
+    }
+    .page .header ul li {
+        font-size: 20px;
+    }
+    .page .header .logo{
+        justify-content: center;
+    }
+    .page .header .logo img{
+        width: 70px;
+        height: 70px;
+    }
+    .page .box .img .imgsmall{
+        width: 90%;
+        height: 20%;
+        flex-direction: row;
+    }
+    .page .box .img .imgsmall img{
+        height: 80px;
+        width: 70px;
+    }
+    .page .box .text {
+        align-content: space-around;
+    }
+    .page .box .text .text2{
+        width:100%;
+        height: 50%;
+    }
+    .page .box .text .text2 span{
+        text-align: left;
+    }
+    .page .box .text .text3{
+        padding: 0;
+    }
+    .page .box .text .text3 .spans{
+        width: 40%;
+    }
+    .page .box .text .text3 .spans span{
+        width: 30%;
+    }
+    .page .box .text .text3 input{
+        height: 25%;
+        width: 45%;
+        margin-top: 5px;
+    }
+}
+@media (min-width:1350px){
+    .page .box .img{
+        height: 95%;
+    }
+    .page .box .img .imgbig img{
+            width: 90%;
+    }
+    .page .box .img .imgsmall{
+        width: 70%;
+    }
+}
+@media (min-width:1500px){
+    .page .box .img .imgbig img{
+            width: 75%;
+    }
+    .page .box .img .imgsmall img{
+        width: 20%;
+    }
+}
